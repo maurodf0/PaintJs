@@ -1,0 +1,22 @@
+  html, body {
+    margin: 0;
+  }
+
+  canvas {
+    position: relative;
+  }
+  
+  .controls {
+    position: absolute;
+    width: 80%;
+    justify-content: center;
+    bottom: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: white;
+    box-shadow: 0 6px 20px #00000033;
+    padding:18px 12px;
+    display: flex;
+    gap:25px;
+    border-radius: 15px;
+  }
