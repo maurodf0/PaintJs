@@ -65,4 +65,6 @@ fill.addEventListener('click', () => {
 
 rubber.addEventListener('click', () => {
   isRubberMode = !isRubberMode;
+  
+  isRubberMode? rubber.textContent = 'Put rubber down' : rubber.textContent = 'Use the rubber' ;
 });

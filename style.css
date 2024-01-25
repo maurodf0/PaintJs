@@ -14,7 +14,8 @@
     left: 50%;
     transform: translateX(-50%);
     background: white;
-    box-shadow: 0 6px 20px #00000033;
+    box-shadow: 0 6px 10px #00000023;
+    border:1px solid #ededed;
     padding:18px 12px;
     display: flex;
     gap:25px;
