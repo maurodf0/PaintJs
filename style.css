@@ -21,3 +21,12 @@
     gap:25px;
     border-radius: 15px;
   }
+
+  .dot {
+    position: absolute;
+    content: '';
+    border-radius: 50px;
+    border:2px solid #ddd;
+    transform: translate(-50%,-50%);
+    mix-blend-mode: difference;
+}
