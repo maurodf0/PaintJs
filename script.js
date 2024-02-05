@@ -5,6 +5,16 @@ const color = document.querySelector('.color');
 const fill =  document.querySelector('.fill');
 const rubber =  document.querySelector('.rubber');
 const dot =  document.querySelector('.dot');
+const save =  document.querySelector('.save');
+
+
+
+const dataURL = localStorage.getItem(canvas);
+const img = new Image();
+img.src = dataURL;
+img.onload = () => {
+  ctx.drawImage(img, 0, 0)
+}
 
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
@@ -53,7 +63,11 @@ canvas.addEventListener('mousedown', (e) => {
 });
 
 canvas.addEventListener('mousemove', draw);
-canvas.addEventListener('mouseup', () => isDrawing = false);
+canvas.addEventListener('mouseup', () => {
+  isDrawing = false
+  //autosave
+  localStorage.setItem(canvas, canvas.toDataURL());
+});
 canvas.addEventListener('mouseout', () => isDrawing = false);
 
 fill.addEventListener('click', () => {
@@ -66,4 +80,8 @@ rubber.addEventListener('click', () => {
   isRubberMode? rubber.textContent = 'Put rubber down' : rubber.textContent = 'Use the rubber' ;
 });
 
+save.addEventListener('click', () => localStorage.setItem(canvas, canvas.toDataURL()));
+
 document.addEventListener('mousemove', dotMove);
+
+

@@ -1,21 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+
   <meta charset="UTF-8">
   <title>PaintJs</title>
   <script src="script.js" defer></script>
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <div class="dot"></div>
 <canvas id="draw" width="800" height="800"></canvas>
+
 <div class="controls">
-    <label>Brush Size
+    <label class="brush">Brush Size
   <input class="size" type="range" min="10" max="80" value="10" data-size="10">
 </label>
- <label>Color <input class="color" type="color" value="#000"> </label>
+ <label class="colors">Color <input class="color" type="color" value="#000"> </label>
   <button class="fill">Fill with Selected color</button>
   <button class="rubber">Use the rubber</button>
+  <button class="save">Save Now</button>
 </div>
 
 </body>
